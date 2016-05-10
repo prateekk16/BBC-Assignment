@@ -9,7 +9,8 @@
 <h5 class="text-grey"> List of Programmes </h5>
 
 <ul class="list-inline">
-    <li  ng-repeat="letter in list.letters track by $index" ng-class="list.activeLetter(letter)"> [[letter | uppercase]] </li>
+    <li  ng-repeat="letter in list.letters track by $index" ng-class="list.activeLetter(letter)"> 
+    <a href="" ng-click="list.getProgram(letter,1)"> [[letter | uppercase]] </a></li>
 </ul>
 </div>
 </div>

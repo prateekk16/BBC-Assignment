@@ -37,30 +37,40 @@
         this.active = function(page){
             if(vm.page == page){
                 return 'disabled';
-            }else{
-                return '';
             }
         };
 
         this.activeLetter = function(letter){
-            
+            if(vm.letter == letter){
+                return 'active';
+            }
         }
 
         this.prev = function(page){
             if(vm.page == '1'){
                 return 'disabled';
-            }else{
-                return '';
+            }
+        }
+        this.prevPage = function(){
+             if(vm.page > '1'){
+                vm.page--;
+                this.getProgram(vm.letter, vm.page);
             }
         }
         this.next = function(page){
             var last =  vm.pages[vm.pages.length-1];
             if(vm.page == last){
                 return 'disabled';
-            }else{
-                return '';
             }
         }
+         this.nextPage = function(){
+             var last =  vm.pages[vm.pages.length-1];
+                if(vm.page < last){
+                    vm.page++;
+                    this.getProgram(vm.letter, vm.page);
+                }
+        }
+
 
         this.image = function(image){
            var tmp = image.replace("{recipe}", "406x228");
