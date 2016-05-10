@@ -1,3 +1,6 @@
+# Demo
+http://bbc.cliqoid.com/
+
 # Deployment
 
 Steps to deploy this project.
@@ -10,6 +13,7 @@ Steps to deploy this project.
   
   - Make sure the apache/nginx is configured properly to the public directory of the laravel as the default web root. 
   - Done.
+  
 
   
 
